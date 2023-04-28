@@ -25,6 +25,7 @@ class LoginController extends Controller
         ])){
             return redirect()->route('admin');
         }
+        Session()->flash('error','Sai tên đăng nhập hoặc mật khẩu');
         return redirect()->back();
     }
 }

@@ -1,1 +1,4 @@
-<h1>Bạn đã đăng nhập thành công </h1>
+@extends('admin.main')
+@section('content')
+    Đây là trang home admin
+@endsection
