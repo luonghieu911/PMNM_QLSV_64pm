@@ -22,7 +22,11 @@ Route::get('/', function () {
 });
 Route::get('/user',[UserController::class,'index']);
 //Route::get('/user','App\Http\Controllers\UserController@index');
-Route::get('/login',[LoginController::class,'index']);
+Route::get('/login',[LoginController::class,'index'])->name('login');
 Route::post('/admin/users/login',[LoginController::class,'login']);
-Route::get('/home',[HomeController::class,'index'])->name('admin');
-Route::get('/admin/lop/add',[LopMonHocController::class,'create']);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/home',[HomeController::class,'index'])->name('admin');
+    Route::get('/admin/lop/add',[LopMonHocController::class,'create']);
+    Route::post('/admin/lop/add/store',[LopMonHocController::class,'store']);
+});

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class LopMonHoc extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'malop',
+        'tenlop',
+        'mota',
+        'soluongsv',
+    ];
 }
