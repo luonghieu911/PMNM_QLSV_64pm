@@ -10,3 +10,4 @@
   <link rel="stylesheet" href="/theme/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/theme/dist/css/adminlte.min.css">
+<script src="/ckeditor/ckeditor.js"></script>

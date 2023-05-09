@@ -27,4 +27,10 @@ class LopMonHocController extends Controller
         $result = $this->lopmonhocService->create($request);
         return redirect()->back();
     }
+    public function index(){
+        return view('admin.lopmonhoc.list',[
+            'title'=>'Danh sách lớp môn học',
+            'lopmonhocs' => $this->lopmonhocService->getAll()
+        ]);
+    }
 }

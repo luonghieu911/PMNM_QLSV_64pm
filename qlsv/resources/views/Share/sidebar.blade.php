@@ -44,13 +44,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="/admin/lop" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách lớp học</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="admin/lop/add" class="nav-link">
+                <a href="/admin/lop/add" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm mới lớp học</p>
                 </a>
@@ -78,7 +78,7 @@
                 </a>
               </li>
             </ul>
-          </li> 
+          </li>
             </ul>
           </li>
         </ul>

@@ -15,10 +15,14 @@ class LopMonHocService
             ]);
             Session()->flash('success','Thêm mới lớp học thành công');
         }
+        //xử lý exception, nếu có exception thì lấy ra message và hiển thị ra màn hình.
         catch (Exception $ex){
             Session()->flash('error',$ex->getMessage());
             return false;
         }
         return true;
+    }
+    public function getAll(){
+        return LopMonHoc::paginate(1);
     }
 }

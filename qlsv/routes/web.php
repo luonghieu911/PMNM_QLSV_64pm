@@ -27,6 +27,11 @@ Route::post('/admin/users/login',[LoginController::class,'login']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/home',[HomeController::class,'index'])->name('admin');
-    Route::get('/admin/lop/add',[LopMonHocController::class,'create']);
-    Route::post('/admin/lop/add/store',[LopMonHocController::class,'store']);
+    Route::prefix('/admin/lop/')->group(function () {
+        Route::prefix('add')->group(function () {
+            Route::get('/',[LopMonHocController::class,'create']);
+            Route::post('/store',[LopMonHocController::class,'store']);
+        });
+        Route::get('/',[LopMonHocController::class,'index']);
+    });
 });
