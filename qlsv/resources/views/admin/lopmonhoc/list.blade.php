@@ -1,6 +1,6 @@
 @extends('admin.main')
 @section('content')
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -20,6 +20,15 @@
                     <td>{{$lopmonhoc->TenLop}}</td>
                     <td>{!! $lopmonhoc->MoTa !!}</td>
                     <td>{{$lopmonhoc->SoLuongSV}}</td>
+                    <td>
+                        <a class="btn btn-primary" href="/admin/lop/edit/{{$lopmonhoc->id}}">
+                            <i class = "fas fa-edit"> </i>
+                        </a>
+                        <a onclick="removeRow({{$lopmonhoc->id}},'/admin/lop/delete')" class="btn btn-danger" href="#">
+                            <i class = "fas fa-trash"> </i>
+                        </a>
+                    </td>
+
                 </tr>
             @endforeach
         </tbody>

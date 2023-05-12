@@ -33,5 +33,8 @@ Route::middleware('auth')->group(function () {
             Route::post('/store',[LopMonHocController::class,'store']);
         });
         Route::get('/',[LopMonHocController::class,'index']);
+        Route::get('/edit/{lop}',[LopMonHocController::class,'edit']);
+        Route::post('/edit/postedit/{id}',[LopMonHocController::class,'postedit']);
+        Route::DELETE('/delete',[LopMonHocController::class,'delete']);
     });
 });
